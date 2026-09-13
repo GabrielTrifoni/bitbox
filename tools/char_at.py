@@ -15,4 +15,3 @@ def run(*args) -> str:
         raise ValueError(f"Index is out of range for string.")
 
     return string[index]
-
