@@ -11,7 +11,7 @@ def run(*args) -> str:
     except ValueError:
         raise ValueError("Second argument must be an integer.")
 
-    if index >= len(string):
+    if index < 0 or index >= len(string):
         raise ValueError(f"Index is out of range for string.")
 
     return string[index]
