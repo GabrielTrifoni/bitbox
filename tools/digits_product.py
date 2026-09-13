@@ -5,13 +5,16 @@
 
 
 def run(*args) -> str:
+    if len(args) != 1:
+        return "Error: Please provide exactly one argument."
+    
     number = args[0]
     
     if not number:
-        raise ValueError("No number provided.")
+        return "Error: Please provide a non-empty input."
 
     if not number.isdigit():
-        raise ValueError("Argument must be a number.")
+        return "Error: Please provide a number."
 
     product = 1
     for i in number:
